@@ -1,0 +1,22 @@
+{
+  "name": "json-env-config",
+  "version": "1.0.1",
+  "description": "Load environment variables from json file",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["json", "env", "config"],
+  "author": "n_tony",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^8.0.54",
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "@types/node": "^8.0.54"
+  }
+}
