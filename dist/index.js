@@ -7,5 +7,15 @@ function jsonenv(filepath, envar) {
     var str = JSON.stringify(obj);
     process.env[envar] = str;
 }
-exports.jsonenv = jsonenv;
 ;
+function read(envar, param) {
+    var jsonstring = process.env[envar];
+    var obj = {};
+    if (jsonstring) {
+        obj = JSON.parse(jsonstring);
+    }
+    return obj;
+}
+;
+exports.jsonenv = jsonenv;
+exports.read = read;
