@@ -1,1 +1,1 @@
-export declare function loadJson(str: string): void;
+export declare function jsonenv(filepath: string, envar: string): void;

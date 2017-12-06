@@ -1,7 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function loadJson(str) {
-    // add runtime check for use in JavaScript
-    console.log('fs');
+var fs = require("fs");
+function jsonenv(filepath, envar) {
+    var file = fs.readFileSync(filepath, "utf8"); //, (err, data) => {
+    var obj = JSON.parse(file);
+    var str = JSON.stringify(obj);
+    process.env[envar] = str;
 }
-exports.loadJson = loadJson;
+exports.jsonenv = jsonenv;
+;
